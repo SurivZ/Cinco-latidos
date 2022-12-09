@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/region.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header" id="inicio">
+      <div class="sombra">
+        <p class="reloj" id="fecha"></p>
+        <p class="reloj" id="hora"></p>
+        <div>
+          <a href="/">Inicio</a>
+          <a href="{{ url_for('amazonia') }}">AMAZONÍA</a>
+          <a href="{{ url_for('andina') }}">ANDINA</a>
+          <a href="{{ url_for('caribe') }}">CARIBE</a>
+          <a href="{{ url_for('orinoquia') }}">ORINOQUÍA</a>
+          <a href="{{ url_for('pacifico') }}">PACÍFICO</a>
+        </div>
+      </div>
+      <img src="{{ imagen }}" alt="estadisticas" type="image/png" />
+    </header>
+    <iframe
+      class="video"
+      src="{{ video }}?controls=0&autoplay=1&loop=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- <video autoplay loop id="video">
+      <source
+        src="https://www.youtube.com/watch?v=J_zf5dURRDs&list=TLPQMDgxMjIwMjJp4tWMQ_9ReQ&index=2&ab_channel=JulioEstebanMart%C3%ADn"
+        type="video/mp4"
+      />
+      El formato del vídeo no es compatible con tu navegador.
+    </video> -->
+    <section></section>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

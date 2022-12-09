@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+header {
+  border: 5px solid white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin: auto;
+  font-size: 100px;
+}
+
+div {
+  margin: auto;
+}
+
+/* .sombra {
+  background-color: #1c1c1d;
+  opacity: 0.7;
+  width: 100%;
+  height: 9vh;
+  position: absolute;
+  top: 48vh;
+} */
+
+a {
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  font-size: 60px;
+  opacity: 50%;
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 100%;
+  text-shadow: 0 0 50px rgb(255, 255, 255);
+  font-size: 90px;
+  transition: 0.5s;
+}
+
+h3 {
+  font-size: small;
+  font-weight: 600;
+  padding: 70px;
+  text-align: center;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+section {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1d;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+.reloj {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+}
+
+#hora {
+  top: 5px;
+  left: 10px;
+}
+
+#fecha {
+  top: 30px;
+  left: 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>CINCO LATIDOS</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>CINCO LATIDOS</h1>
+      <p class="reloj" id="fecha"></p>
+      <p class="reloj" id="hora"></p>
+      <div>
+        <a href="{{ url_for('amazonia') }}">AMAZONÍA</a>
+        <a href="{{ url_for('andina') }}">ANDINA</a>
+        <a href="{{ url_for('caribe') }}">CARIBE</a>
+        <a href="{{ url_for('orinoquia') }}">ORINOQUÍA</a>
+        <a href="{{ url_for('pacifico') }}">PACÍFICO</a>
+      </div>
+      <div>
+        <h3>
+          La riqueza de una nación es su aire, agua, suelo, bosques, minerales, ríos, lagos, océanos, belleza escénica, hábitats de vida silvestre y biodiversidad…<br>Eso es todo lo que hay, esa es toda la economía. De ahí proviene toda la actividad económica y los empleos. Estos sistemas biológicos son la <br> riqueza sustentable del mundo. Durante 100 años hemos estado conquistando la naturaleza. Ahora lo estamos golpeando hasta la muerte.
+        </h3>
+      </div>
+    </header>
+    <iframe
+      class="video"
+      src="{{ video }}?controls=0&autoplay=1&mute=1&loop=1&"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
+      allowfullscreen
+    ></iframe>
+    <!-- <video autoplay loop muted id="video">
+      <source src="{{ video }}" type="video/mp4" />
+      El formato del vídeo no es compatible con tu navegador.
+    </video> -->
+    <section></section>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
