@@ -33,18 +33,7 @@
         </h3>
       </div>
     </header>
-    <iframe
-      class="video"
-      src="{{ video }}?controls=0&autoplay=1&mute=1&loop=1&"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
-      allowfullscreen
-    ></iframe>
-    <!-- <video autoplay loop muted id="video">
-      <source src="{{ video }}" type="video/mp4" />
-      El formato del vídeo no es compatible con tu navegador.
-    </video> -->
+	  <img class="video" src="{{ video }}" alt="Fondo">
     <section></section>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
   </body>

@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 
-
 app = Flask('Cinco latidos')
 
 
@@ -10,33 +9,48 @@ def error_404(e):
 
 
 @app.route('/')
-def home():
-    return render_template('index.html', video='https://www.youtube.com/embed/2zfofAtcoJs')
+def index():
+    return render_template('index.html', video='../static/src/inicio.webp')
 
 
 @app.route('/amazonia')
 def amazonia():
-    return render_template('region.html', title='Amazonía', imagen='../static/src/amazonia.png', video='https://www.youtube.com/embed/TxCm8KSZKkw')
+    return render_template('region.html',
+                           title='Amazonía',
+                           imagen='../static/src/amazonia.png',
+                           video='https://www.youtube.com/embed/TxCm8KSZKkw')
 
 
 @app.route('/andina')
 def andina():
-    return render_template('region.html', title='Andina', imagen='../static/src/andina.png', video='https://www.youtube.com/embed/v7MWUfG1VPU')
+    return render_template('region.html',
+                           title='Andina',
+                           imagen='../static/src/andina.png',
+                           video='https://www.youtube.com/embed/v7MWUfG1VPU')
 
 
 @app.route('/caribe')
 def caribe():
-    return render_template('region.html', title='Caribe', imagen='../static/src/caribe.png', video='https://www.youtube.com/embed/DonE1EtkM6M')
+    return render_template('region.html',
+                           title='Caribe',
+                           imagen='../static/src/caribe.png',
+                           video='https://www.youtube.com/embed/DonE1EtkM6M')
 
 
 @app.route('/orinoquia')
 def orinoquia():
-    return render_template('region.html', title='Orinoquía', imagen='../static/src/orinoquia.png', video='https://www.youtube.com/embed/l6NPEJlJfSs')
+    return render_template('region.html',
+                           title='Orinoquía',
+                           imagen='../static/src/orinoquia.png',
+                           video='https://www.youtube.com/embed/l6NPEJlJfSs')
 
 
 @app.route('/pacifico')
 def pacifico():
-    return render_template('region.html', title='Pacífico', imagen='../static/src/pacifico.png', video='https://www.youtube.com/embed/Ek7NHfJc4-k')
+    return render_template('region.html',
+                           title='Pacífico',
+                           imagen='../static/src/pacifico.png',
+                           video='https://www.youtube.com/embed/Ek7NHfJc4-k')
 
 
 if __name__ == '__main__':

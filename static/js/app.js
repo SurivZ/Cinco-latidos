@@ -13,3 +13,14 @@ setInterval(() => {
   hora.innerHTML = $hora;
   fecha.innerHTML = `${$fecha.dia}/${$fecha.mes}/${$fecha.anio}`;
 }, 1000);
+
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}, false);
